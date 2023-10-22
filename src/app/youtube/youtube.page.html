@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>YouTube</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div>
+    <h2 class="text-center">
+      Video Tutoriales de ejercicos para ti 
+    </h2>
+  </div>
+  <ion-list>
+    <ion-item class="select">
+      <ion-select [(ngModel)]="selectedOption" label="Seleccione una opción" label-placement="floating">
+        <ion-select-option value="1">Déficit Calórico</ion-select-option>
+        <ion-select-option value="2">Hiper Calórico</ion-select-option>
+        <ion-select-option value="3">Celiacos</ion-select-option>
+        <ion-select-option value="4">Otros</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <h1 class="text-center">Videos para hacer pruebas</h1>
+
+  <!-- Mostrar el iframe del video si hay una opción seleccionada -->
+  <iframe *ngIf="selectedOption" [src]="videoTutorial(videoUrl[selectedOption - 1])" width="100%" height="50%"></iframe>
+  <br>
+
+  <!-- Resto de tus iframes... -->
+
+  <div id="container">
+    <ion-button (click)="goToHome()" class="btn">Go to Home</ion-button>
+  </div>
+</ion-content>

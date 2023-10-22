@@ -1,0 +1,25 @@
+.scanner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    height: calc(100vh - 2rem);
+}
+
+.video-container{
+    video {
+        width: 100%;
+        border-radius: 6px;
+    }
+}
+.mt{
+    margin-top: 2rem;
+
+}
+.float-button{
+    float: right;
+    z-index: 10;
+    position: relative;
+    transform: translate(120px, 49px);
+}
